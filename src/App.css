@@ -7,6 +7,22 @@
        url('../src/assets/fonts/BilboINC-Regular_web.ttf') format('truetype'); 
 }
 
+:root{
+  --verylightgrey: hsl(220, 13%, 95%);
+  --lightgrey: hsl(217, 9%, 71%);
+  --grey: hsl(210, 3%, 52%);
+  --anthra: hsl(240, 6%, 17%);
+  --hightlight: #ea3fa3;
+  --highlightfont :'BilboINC';
+  --mainfont : 'Oxygen', sans-serif;
+}
+
+/* temp - en cosntruction */
+h1{
+  color: rgb(232, 70, 20);
+}
+/* temp - en cosntruction */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -14,37 +30,31 @@
   text-align: center;
 }
 
-:root{
-  --verylightgrey: hsl(220, 13%, 95%);
-  --lightgrey: hsl(217, 9%, 71%);
-  --grey: hsl(210, 3%, 52%);
-  --anthra: hsl(240, 6%, 17%);
-  --hightlight: #ea3fa3;
-}
-
 body{
   background-color: var(--verylightgrey);
   color: var(--anthra);
   font-size: 16px;
   position: relative;
+  font-family: var(--mainfont);
 }
 
 @keyframes typewriter {
   from {
-    width: 0; /* Start with no width (invisible) */
+    width: 0;
   }
   to {
-    width: 100%; /* End with full width (visible) */
+    width: 100%; 
   }
 }
 
+/* Make coffee and hello perfectly stucked together even when resizing browser window */
 #hello {
   position: absolute; 
   top: 22rem;
   left: 50%; 
   transform: translateX(-50%); 
   z-index: 1000;
-  font-family: 'BilboINC';
+  font-family: var(--highlightfont);
   font-size: 3.75rem; 
   animation: typewriter 3s ease forwards;
   white-space: nowrap; /* Prevent line break during animation */
@@ -59,6 +69,9 @@ body{
   left: calc(50% + -4.3rem); 
   transform: translateX(-50%); 
 }
+
+
+/***** NAV *****/
 
 nav {
   display: flex;
@@ -85,7 +98,7 @@ nav ul li:nth-child(-n + 2) {
 }
 
 nav ul li a {
-  font-family: 'Oxygen', sans-serif;
+  font-family: var(--mainfont);
   font-weight: 700;
   text-decoration: none;
   color: var(--anthra);
@@ -140,6 +153,8 @@ nav ul li a:hover span {
 nav ul li a:hover{
   color: var(--hightlight);
 }
+
+/***** FOOTER *****/
 
 footer {
   position: fixed;
