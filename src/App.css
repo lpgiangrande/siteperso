@@ -70,7 +70,6 @@ body{
   transform: translateX(-50%); 
 }
 
-
 /***** NAV *****/
 
 nav {
@@ -94,7 +93,7 @@ nav ul li {
 }
 
 nav ul li:nth-child(-n + 2) {
-  margin-right: 25px; 
+  margin-right:  1.5625rem; 
 }
 
 nav ul li a {
@@ -183,6 +182,20 @@ footer a:hover {
 }
 
 
+/* Smartphones en mode portrait */
+@media screen and (max-width: 480px) {
+  nav ul li:nth-child(-n + 2) {
+    margin-right:  0.7rem; 
+  }
+  footer a {
+    padding: 0 15px;
+  }
+}
+
+/* Smartphones en mode paysage */
+/* @media screen and (max-width: 767px) {
+  
+} */
 
 
 
