@@ -11,7 +11,7 @@ export default function App() {
       <div className="App">
         <div id='hello'>H E Y : )</div>
         <div>
-          <img className="coffee" src="/public/images/coffee-mug.png" alt="coffee mug illustration" />
+          <img className="coffee" src="../public/images/coffee-mug.png" alt="coffee mug illustration" />
         </div>
         <Nav />
         <Footer />
