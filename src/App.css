@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'BilboINC';
+  src: url('../src/assets/fonts/BilboINC-Regular_web.woff2') format('woff2'),
+       url('../src/assets/fonts/BilboINC-Regular_web.woff') format('woff'),
+       url('../src/assets/fonts/BilboINC-Regular_web.ttf') format('truetype'); 
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root{
+  --verylightgrey: hsl(220, 13%, 95%);
+  --lightgrey: hsl(217, 9%, 71%);
+  --grey: hsl(210, 3%, 52%);
+  --anthra: hsl(240, 6%, 17%);
+  --hightlight: #ea3fa3;
+}
+
+body{
+  background-color: var(--verylightgrey);
+  color: var(--anthra);
+  font-size: 16px;
+  position: relative;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0; /* Start with no width (invisible) */
+  }
+  to {
+    width: 100%; /* End with full width (visible) */
+  }
+}
+
+#hello {
+  position: absolute; 
+  top: 22rem;
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1000;
+  font-family: 'BilboINC';
+  font-size: 3.75rem; 
+  animation: typewriter 3s ease forwards;
+  white-space: nowrap; /* Prevent line break during animation */
+  overflow: hidden; /* Hide the extra characters during animation */
+}
+
+.coffee {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+  top: 15rem; 
+  left: calc(50% + -4.3rem); 
+  transform: translateX(-50%); 
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 26.5rem; 
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: var(--anthra);
+  padding: 0 60px; */
+}
+
+ul{
+  list-style: none;
+  padding: 0; 
+}
+
+nav ul li {
+  display: inline-block; 
+}
+
+nav ul li:nth-child(-n + 2) {
+  margin-right: 25px; 
+}
+
+nav ul li a {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--anthra);
+  /* effect */
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+} 
+/* effect */
+nav ul li a::before,
+nav ul li a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+nav ul li a::before {
+  background-color: var(--hightlight);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+nav ul li a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: var(--hightlight);
+}
+
+nav ul li a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+nav ul li a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+nav ul li a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+nav ul li a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+nav ul li a:hover{
+  color: var(--hightlight);
+}
+
+footer {
+  position: absolute;
+  z-index: 2000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 21px 0;
+  background-color: var(--anthra);
+  width: 15rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer a {
+  width: 1rem;
+  height: auto;
+  padding: 0 10px;
+  fill: var(--verylightgrey);
+  transition: fill 0.3s ease;
+}
+
+footer a:hover {
+  fill: var(--hightlight); 
+}
+
+
+
+
+
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
